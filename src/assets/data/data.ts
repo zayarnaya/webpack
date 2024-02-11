@@ -1,7 +1,7 @@
-import picFriend from './../img/friend.jpg';
-import picKids from './../img/kids.jpg';
-import picNight from './../img/night.jpg';
-import picTrento from './../img/trento.jpg';
+import picFriend from '@images/friend.jpg';
+import picKids from '@images/kids.jpg';
+import picNight from '@images/night.jpg';
+import picTrento from '@images/trento.jpg';
 
 export const pics = [
     {

@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 import classNames from 'classnames';
-import styles from './Figure.module.scss';
+import styles from '@components/Figure/Figure.module.scss';
 
 interface Props extends PropsWithChildren {
 	text?: string;

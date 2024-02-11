@@ -1,9 +1,9 @@
 import React, { StrictMode } from 'react';
 
-import Figure from './components/Figure/Figure.tsx';
-import { pics } from './data/data.ts';
+import Figure from '@components/Figure/Figure.tsx';
+import { pics } from '@assets/data/data.ts';
 import './App.scss';
-import './styles/index.scss';
+import './assets/styles/index.scss';
 
 const App = () => {
 	return (

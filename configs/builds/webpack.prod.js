@@ -5,12 +5,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
 	mode: 'production',
 	entry: {
-        index: './src/index.js',
-        add: './src/additional.js',
+        index: path.resolve(__dirname, './../../src/index.js'),
+        add: path.resolve(__dirname, './../../src/additional.js'),
     },
 	output: {
 		filename: '[name].[hash].js',
-		path: path.resolve(__dirname, './../build'),
+		path: path.resolve(__dirname, './../../build'),
 		clean: true,
 		assetModuleFilename: path.join('images', '[name].[contenthash][ext]'),
 	},
