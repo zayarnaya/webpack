@@ -1,4 +1,3 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -14,7 +13,6 @@ module.exports = {
 		clean: true,
 		assetModuleFilename: path.join('images', '[name].[contenthash][ext]'),
 	},
-	devtool: 'source-map',
 	module: {
 		rules: [
 			{
