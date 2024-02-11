@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPluginInstance = require('../plugins/MiniCssExtractPlugin');
 
 module.exports = {
 	mode: 'production',
@@ -26,11 +27,7 @@ module.exports = {
 			},
 		],
 	},
-	plugins: [
-		new MiniCssExtractPlugin({
-			filename: '[name].[contenthash].css',
-		}),
-	],
+	plugins: [ MiniCssExtractPluginInstance ],
 	optimization: {
 		splitChunks: {
 			maxSize: 25000,
@@ -38,9 +35,7 @@ module.exports = {
 			cacheGroups: {
 				vendor: {
 				  test: /[\\/]node_modules[\\/]/,
-				  name: 'vendor',
-				  chunks: 'all',
-				  maxSize: 250000
+				  name: 'vendor'
 				}
 			  }
 		}
