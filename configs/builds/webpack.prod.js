@@ -31,4 +31,18 @@ module.exports = {
 			filename: '[name].[contenthash].css',
 		}),
 	],
+	optimization: {
+		splitChunks: {
+			maxSize: 25000,
+			chunks: 'all',
+			cacheGroups: {
+				vendor: {
+				  test: /[\\/]node_modules[\\/]/,
+				  name: 'vendor',
+				  chunks: 'all',
+				  maxSize: 250000
+				}
+			  }
+		}
+	}
 };
