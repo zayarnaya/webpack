@@ -12,7 +12,7 @@ module.exports = {
 		filename: '[name].[hash].js',
 		path: path.resolve(__dirname, './../../build'),
 		clean: true,
-		assetModuleFilename: path.join('images', '[name].[contenthash][ext]'),
+		assetModuleFilename: path.join('assets', '[name].[contenthash][ext]'),
 	},
 	module: {
 		rules: [

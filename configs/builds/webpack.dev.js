@@ -6,7 +6,7 @@ module.exports = {
 		filename: '[name].js',
 		path: path.resolve(__dirname, './../../dist'),
 		clean: true,
-		assetModuleFilename: path.join('images', '[name].[ext]'),
+		assetModuleFilename: path.join('assets', '[name].[ext]'),
 	},
 	devtool: 'source-map',
 	module: {
