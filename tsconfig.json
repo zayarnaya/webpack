@@ -1,5 +1,6 @@
 {
 	"compilerOptions": {
+		"outDir": "./build",
 		"allowJs": true,
 		"target": "es5",
 		"jsx": "react",
@@ -11,5 +12,5 @@
 		"baseUrl": "./",
 	},
 	"include": ["./src", "declaration.d.ts"],
-	"exclude": ["node_modules"],
+	"exclude": ["node_modules", "./build/*", "./dist/*"],
 }
