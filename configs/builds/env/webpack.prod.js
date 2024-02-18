@@ -1,6 +1,7 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const MiniCssExtractPluginInstance = require('../../plugins/MiniCssExtractPlugin');
+const styles = require('../../rules/styles')(true);
+const styles_modules = require('../../rules/style_modules')(true);
 
 module.exports = {
 	mode: 'production',
@@ -15,17 +16,7 @@ module.exports = {
 		assetModuleFilename: path.join('assets', '[name].[contenthash][ext]'),
 	},
 	module: {
-		rules: [
-			{
-				test: /\.(scss|css)$/,
-				exclude: /\.module\.(scss|css)$/,
-				use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-			},
-			{
-				test: /\.module\.(scss|css)$/,
-				use: [MiniCssExtractPlugin.loader, { loader: 'css-loader', options: { modules: true } }, 'sass-loader'],
-			},
-		],
+		rules: [ styles, styles_modules ],
 	},
 	plugins: [ MiniCssExtractPluginInstance ],
 	optimization: {

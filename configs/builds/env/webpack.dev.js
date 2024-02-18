@@ -1,4 +1,6 @@
 const path = require('path');
+const styles = require('../../rules/styles')();
+const styles_modules = require('../../rules/style_modules')();
 
 module.exports = {
 	mode: 'development',
@@ -10,17 +12,7 @@ module.exports = {
 	},
 	devtool: 'source-map',
 	module: {
-		rules: [
-			{
-				test: /\.(scss|css)$/,
-				exclude: /\.module\.(scss|css)$/,
-				use: ['style-loader', 'css-loader', 'sass-loader'],
-			},
-			{
-				test: /\.module\.(scss|css)$/,
-				use: ['style-loader', { loader: 'css-loader', options: { modules: true } }, 'sass-loader'],
-			},
-		],
+		rules: [ styles, styles_modules ],
 	},
 	devServer: {
 		watchFiles: path.join(__dirname, '@'),
