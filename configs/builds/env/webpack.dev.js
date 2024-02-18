@@ -4,7 +4,7 @@ module.exports = {
 	mode: 'development',
 	output: {
 		filename: '[name].js',
-		path: path.resolve(__dirname, './../../dist'),
+		path: path.resolve(__dirname, './../../../dist'),
 		clean: true,
 		assetModuleFilename: path.join('assets', '[name].[ext]'),
 	},
@@ -23,7 +23,7 @@ module.exports = {
 		],
 	},
 	devServer: {
-		watchFiles: path.join(__dirname, './../src'),
+		watchFiles: path.join(__dirname, '@'),
 		port: 9000,
 		hot: true,
 	},
