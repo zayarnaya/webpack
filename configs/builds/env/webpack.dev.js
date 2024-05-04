@@ -1,4 +1,5 @@
 const path = require('path');
+const envPlugin = require('../../plugins/DefinePlugin')('development');
 const styles = require('../../rules/styles')();
 const styles_modules = require('../../rules/style_modules')();
 
@@ -11,6 +12,7 @@ module.exports = {
 		assetModuleFilename: path.join('assets', '[name].[ext]'),
 	},
 	devtool: 'source-map',
+	plugins: [envPlugin],
 	module: {
 		rules: [ styles, styles_modules ],
 	},
