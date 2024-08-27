@@ -11,7 +11,7 @@ module.exports = {
         add: path.resolve(__dirname, './../../../src/additional.js'),
     },
 	output: {
-		filename: '[name].[hash].js',
+		filename: '[name].[fullhash].js',
 		path: path.resolve(__dirname, './../../../build'),
 		clean: true,
 		assetModuleFilename: path.join('assets', '[name].[contenthash][ext]'),
