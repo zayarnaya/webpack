@@ -20,4 +20,7 @@ module.exports = {
 			'@components': path.resolve(__dirname, './../../src/views/components'),
 		}
 	},
+	devServer: {
+		historyApiFallback: true
+	}
 };
